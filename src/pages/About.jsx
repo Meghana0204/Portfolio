@@ -57,7 +57,8 @@ const Details = styled.div`
 const EduCard = styled.div`
   border-left: 3px solid ${({ theme }) => theme.accentIndigo};
   padding-left: 1.5rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 
   h3 {
     font-family: 'Space Grotesk', sans-serif;
@@ -71,6 +72,30 @@ const EduMeta = styled.div`
   color: ${({ theme }) => theme.accentViolet};
   margin: 0.25rem 0 0.5rem;
   font-weight: 500;
+`;
+
+const ResumeButton = styled.a`
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  background: ${({ theme }) => theme.gradientBtn};
+  color: ${({ theme }) => theme.textPrimary};
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  margin-top: 1rem;
+
+  &:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+  }
 `;
 
 const CardsGrid = styled.div`
@@ -143,6 +168,10 @@ export default function About() {
               <EduMeta>Bangalore Institute of Technology | Dec 2023 - Sept 2026</EduMeta>
               <p><strong>GPA:</strong> 8.3 / 10.0</p>
             </EduCard>
+            
+            <ResumeButton href="https://drive.google.com/file/d/1IrHe3qNrsxxk3UQTdLNZJbCc9OKlmhhj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              View My Resume <i className="fas fa-file-pdf"></i>
+            </ResumeButton>
           </Details>
           
           <CardsGrid>

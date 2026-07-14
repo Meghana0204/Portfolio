@@ -127,12 +127,14 @@ const Badge = styled.span`
 
 const CTAs = styled.div`
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1.25rem;
   margin-top: 1rem;
 
   @media (max-width: 480px) {
     flex-direction: column;
     width: 100%;
+    gap: 1rem;
   }
 `;
 
@@ -161,6 +163,35 @@ const Button = styled(Link)`
     background: ${({ $primary, theme }) => ($primary ? '' : theme.bgGlassHover)};
     border-color: ${({ $primary, theme }) => ($primary ? '' : theme.textPrimary)};
     filter: ${({ $primary }) => ($primary ? 'brightness(1.05)' : 'none')};
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+`;
+
+const ExternalButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  
+  background: transparent;
+  color: ${({ theme }) => theme.textPrimary};
+  border: 2px solid ${({ theme }) => theme.borderGlassHover};
+
+  &:hover {
+    transform: translateY(-2px);
+    background: ${({ theme }) => theme.bgGlassHover};
+    border-color: ${({ theme }) => theme.textPrimary};
   }
 
   @media (max-width: 480px) {
@@ -310,6 +341,9 @@ export default function Home() {
               <Button to="/projects" $primary="true">
                 View Projects <i className="fas fa-arrow-right"></i>
               </Button>
+              <ExternalButton href="https://drive.google.com/file/d/1IrHe3qNrsxxk3UQTdLNZJbCc9OKlmhhj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                View Resume <i className="fas fa-file-alt"></i>
+              </ExternalButton>
               <Button to="/contact">
                 Get in Touch <i className="fas fa-paper-plane"></i>
               </Button>
