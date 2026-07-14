@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from './styles/theme';
 import GlobalStyles from './styles/GlobalStyles';
@@ -28,10 +28,13 @@ export default function App() {
     });
   };
 
+  // Set the basename automatically (empty for development, /Portfolio for production)
+  const basename = import.meta.env.DEV ? '/' : '/Portfolio';
+
   return (
     <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
       <GlobalStyles />
-      <Router>
+      <Router basename={basename}>
         <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
           <Header currentTheme={theme} toggleTheme={toggleTheme} />
           
