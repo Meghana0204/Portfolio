@@ -12,16 +12,16 @@ const cursorBlink = keyframes`
 `;
 
 const HeroSection = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 5rem;
+  padding: 8rem 0 4rem;
   overflow: hidden;
   position: relative;
 
   @media (max-width: 768px) {
-    height: auto;
+    min-height: auto;
     padding: 8rem 0 4rem;
   }
 `;
