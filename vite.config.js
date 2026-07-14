@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // Automatically adjust base path if running in GitHub Actions CI
-  base: process.env.GITHUB_ACTIONS ? '/meghana-portfolio/' : '/',
+  base: process.env.GITHUB_ACTIONS ? '/Portfolio/' : '/',
 })
