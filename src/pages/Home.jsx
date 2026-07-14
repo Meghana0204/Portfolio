@@ -335,7 +335,6 @@ export default function Home() {
             <BadgeContainer>
               <Badge $indigo><i className="fas fa-award"></i> Top 50 Performer GenAI Exchange</Badge>
               <Badge $emerald><i className="fas fa-graduation-cap"></i> BE CSE (Data Science) Student</Badge>
-              <Badge><i className="fas fa-clock"></i> Open to Remote Jobs Only</Badge>
             </BadgeContainer>
             <CTAs>
               <Button to="/projects" $primary="true">
