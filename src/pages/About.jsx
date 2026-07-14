@@ -165,7 +165,7 @@ export default function About() {
             </p>
             <EduCard>
               <h3>BE in Computer Science & Engineering (Data Science)</h3>
-              <EduMeta>Bangalore Institute of Technology | Dec 2023 - Sept 2026</EduMeta>
+              <EduMeta>AMC Engineering College | Dec 2023 - Sept 2026</EduMeta>
               <p><strong>GPA:</strong> 8.3 / 10.0</p>
             </EduCard>
             

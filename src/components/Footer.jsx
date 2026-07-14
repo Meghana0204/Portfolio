@@ -45,7 +45,7 @@ export default function Footer() {
           <li><FooterLink to="/projects">Projects</FooterLink></li>
           <li><FooterLink to="/contact">Contact</FooterLink></li>
         </FooterNav>
-        <p>&copy; 2026 Meghana Pradeep. All Rights Reserved. Built with Visual Excellence & React.</p>
+        <p>&copy; 2026 Meghana Pradeep. All Rights Reserved.</p>
       </Container>
     </FooterWrapper>
   );
