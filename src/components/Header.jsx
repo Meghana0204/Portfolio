@@ -33,7 +33,9 @@ const Logo = styled(Link)`
   span {
     background: ${({ theme }) => theme.gradientText};
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
   }
 `;
 

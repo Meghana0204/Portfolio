@@ -320,7 +320,7 @@ export default function Home() {
             <AvatarContainer>
               <Avatar>
                 {/* 3D Generated Developer Girl Portrait */}
-                <img src="/avatar.jpg" alt="Meghana Pradeep - 3D Developer Girl Avatar" />
+                <img src={`${import.meta.env.BASE_URL}avatar.jpg`} alt="Meghana Pradeep - 3D Developer Girl Avatar" />
               </Avatar>
             </AvatarContainer>
           </Visual>
